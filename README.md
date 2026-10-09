@@ -1,0 +1,2 @@
+# WIM
+Welding inventory manager
