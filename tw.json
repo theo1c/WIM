@@ -1,0 +1,6 @@
+{
+  "resource": "items",
+  "title": "name",
+  "done": "reordered",
+  "sample": { "level": "low", "category": "Wire", "quantity": 5 }
+}

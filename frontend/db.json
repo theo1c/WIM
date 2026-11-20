@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "E6013 electrodes 2.5 mm",
+      "reordered": false,
+      "level": "low",
+      "category": "Electrodes",
+      "quantity": 2
+    },
+    {
+      "id": 3,
+      "name": "Corgon cylinder 18 L",
+      "reordered": false,
+      "level": "high",
+      "category": "Gas cylinders",
+      "quantity": 6
+    },
+    {
+      "id": 4,
+      "name": "MIG contact tips M6 0.8 mm",
+      "reordered": false,
+      "level": "low",
+      "category": "Nozzles",
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "name": "E7018 electrodes 3.2 mm",
+      "reordered": true,
+      "level": "high",
+      "category": "Electrodes",
+      "quantity": 8
+    }
+  ]
+}
