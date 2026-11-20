@@ -1,4 +1,3 @@
-// Fixed values and their labels, in a single place.
 export const LEVELS = [
   { value: "low", label: "Low" },
   { value: "medium", label: "Medium" },

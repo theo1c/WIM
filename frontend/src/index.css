@@ -9,12 +9,12 @@
   --card: #ffffff;
   --text: #1f2933;
   --muted: #6b7280;
-  --accent: #c2410c; /* welding-arc orange */
+  --accent: #c2410c;
   --accent-dark: #9a3412;
   --accent-soft: #ffedd5;
   --border: #e5e2dc;
   --on-accent: #ffffff;
-  --low: #dc2626; /* red alert */
+  --low: #dc2626; 
   --medium: #d97706;
   --high: #15803d;
   --error-bg: #fef2f2;

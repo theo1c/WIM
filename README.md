@@ -35,7 +35,6 @@ From Stage 6 on, the app needs the mock API and the Vite dev server, in two term
 The API address is read from `VITE_API_URL` (see `frontend/.env.example`).
 
 ## Stage 2: data logic
-
 Plain JavaScript, no DOM. `inventory.js` holds the array and the functions that read and change it (list, count, search, add with validation, toggle, delete). None of them modify the input array. Results are printed in the browser console (F12).
 
 ## Stage 4: components
@@ -88,46 +87,4 @@ back. Component styles moved to CSS Modules (`*.module.css` next to each compone
 - [x] Stage 6: data from a mock API
 - [x] Stage 7: form and validation
 - [x] Stage 8: routing and detail page
-- [ ] Stage 9: own backend with Express
-
-## Checklists
-
-Line ranges refer to the commit of the stage; replace them with GitHub permalinks after pushing.
-
-### Stage 6: checklist
-
-| ID | Requirement | Where (permalink) | How to check |
-| -- | ----------- | ----------------- | ------------ |
-| S6-R1 | `npm run api` starts, route shows JSON | frontend/package.json, frontend/db.json | open localhost:3001/items |
-| S6-R2 | data no longer in React code | frontend/src/pages/ItemsPage.jsx#L8 (`useState([])`) | read |
-| S6-R3 | loading message while waiting | frontend/src/pages/ItemsPage.jsx#L73-L77 | `--delay 4000` |
-| S6-R4 | error message when API is down | frontend/src/pages/ItemsPage.jsx#L13-L31 | stop `npm run api`, refresh |
-| S6-R5 | fetch only in api.js, URL from env | frontend/src/api.js#L3-L16, frontend/.env.example | search for `fetch` |
-| S6-R6 | README Stage 6 section + AI log | README.md, AI-Log/etapa-06.md | read |
-| S6-R7 | commit "Stage 6" pushed | link to the commit | commit history |
-
-### Stage 7: checklist
-
-| ID | Requirement | Where (permalink) | How to check |
-| -- | ----------- | ----------------- | ------------ |
-| S7-R1 | controlled form: value + onChange on every field | frontend/src/components/ItemForm.jsx#L57-L118 | read |
-| S7-R2 | empty name shows an error, nothing is sent | frontend/src/components/ItemForm.jsx#L16-L26 (`validate`) | submit empty, watch Network |
-| S7-R3 | added item shows in the list and survives refresh | frontend/src/pages/ItemsPage.jsx#L34-L37 (`handleAdd`), frontend/src/api.js#L26-L28 | add, refresh |
-| S7-R4 | toggle and delete survive refresh | frontend/src/pages/ItemsPage.jsx#L39-L56 | toggle/delete, refresh |
-| S7-R5 | button disabled while sending, form cleared only on success | frontend/src/components/ItemForm.jsx#L28-L54 | `--delay 3000`; stop API and submit |
-| S7-R6 | tw.json and the data-testid attributes from table 7.3 | tw.json, frontend/src/components/ItemCard.jsx#L13-L50 | querySelectorAll in the console |
-| S7-R7 | README Stage 7 section + AI log | README.md, AI-Log/etapa-07.md | read |
-| S7-R8 | commit "Stage 7" pushed | link to the commit | commit history |
-
-### Stage 8: checklist
-
-| ID | Requirement | Where (permalink) | How to check |
-| -- | ----------- | ----------------- | ------------ |
-| S8-R1 | header navigation changes page without reload | frontend/src/App.jsx#L13-L17, frontend/src/components/Layout.jsx#L29-L36 | click links, watch Network |
-| S8-R2 | click on an item opens its detail page | frontend/src/components/ItemCard.jsx#L23-L29, frontend/src/pages/ItemDetailPage.jsx | click a title |
-| S8-R3 | refresh on the detail URL works; missing id shows an error | frontend/src/pages/ItemDetailPage.jsx#L8-L51 | refresh /items/1, open /items/999 |
-| S8-R4 | unknown URL shows the app 404 page | frontend/src/App.jsx#L17 (`path="*"`), frontend/src/pages/NotFoundPage.jsx | open /ceva |
-| S8-R5 | each component has its .module.css; index.css only shared styles | frontend/src/components, frontend/src/pages, frontend/src/index.css | read |
-| S8-R6 | data-testid attributes from tables 7.3 and 8.2; detail route `/<resource>/:id` | Layout.jsx, ItemCard.jsx, ItemDetailPage.jsx, NotFoundPage.jsx | querySelector in the console |
-| S8-R7 | README Stage 8 section + AI log | README.md, AI-Log/etapa-08.md | read |
-| S8-R8 | commit "Stage 8" pushed | link to the commit | commit history |
+-
